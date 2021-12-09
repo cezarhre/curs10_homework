@@ -15,11 +15,7 @@ public class Basket {
     }
 
     public boolean find(String findFruit) {
-        if (fruits.contains(findFruit)) {
-            return true;
-        } else {
-            return false;
-        }
+        return fruits.contains(findFruit);
     }
 
     public boolean remove(String outFruit) {
