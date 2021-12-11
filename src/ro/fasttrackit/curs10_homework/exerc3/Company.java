@@ -11,22 +11,24 @@ public class Company {
         employees = new ArrayList<>();
     }
 
-    public String getManager() {
+    public List<Person> getManager() {
+        List<Person> boss = new ArrayList<>();
         for (Person pos : employees) {
             if (pos.getPosition().equals("Manager")) {
-                return pos.getName();
+                boss.add(pos);
             }
         }
-        return null;
+        return boss;
     }
 
-    public String getPersons(String profession) {
-        for (int i = 0; i < employees.size(); i++) {
-            if (profession.equals(employees.get(i).getPosition())) {
-                return employees.get(i).getName();
+    public List<Person> getPersons(String profession) {
+        List<Person> proff = new ArrayList<>();
+        for (Person employee : employees) {
+            if (profession.equals(employee.getPosition())) {
+                proff.add(employee);
             }
         }
-        return profession;
+        return proff;
     }
 
     public List<Person> getPersonsOlder(int age) {
