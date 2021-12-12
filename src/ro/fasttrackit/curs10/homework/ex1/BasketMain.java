@@ -19,10 +19,10 @@ public class BasketMain {
         System.out.println(b);
 
         System.out.println(b.find("portocale"));
-        System.out.println(b.remove("cirese"));
+        System.out.println(b.distinct());
+        b.remove("cirese");
         System.out.println(b);
         System.out.println(b.position("pere"));
-        System.out.println(b.distinct());
         System.out.println(b.count());
         System.out.println(b.customCount());
 

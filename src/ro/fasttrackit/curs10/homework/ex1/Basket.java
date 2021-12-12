@@ -18,15 +18,13 @@ public class Basket {
         return fruits.contains(findFruit);
     }
 
-    public boolean remove(String outFruit) {
+    public void remove(String outFruit) {
         Iterator<String> iterator = fruits.iterator();
             while (iterator.hasNext()) {
                 if (iterator.next().equals(outFruit)) {
                     iterator.remove();
-                    return true;
                 }
             }
-        return false;
     }
 
     public int position(String posFruit) {
@@ -41,6 +39,7 @@ public class Basket {
 
     public Collection<String> distinct() {
         Collection<String> basket = new HashSet<>(fruits);
+        basket.addAll(fruits);
         return new HashSet<>(fruits);
     }
 
