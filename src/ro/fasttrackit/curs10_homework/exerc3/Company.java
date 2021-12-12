@@ -11,14 +11,12 @@ public class Company {
         employees = new ArrayList<>();
     }
 
-    public List<Person> getManager() {
-        List<Person> boss = new ArrayList<>();
+    public void getManager() {
         for (Person pos : employees) {
             if (pos.getPosition().equals("Manager")) {
-                boss.add(pos);
+                System.out.println(pos.getName());
             }
         }
-        return boss;
     }
 
     public List<Person> getPersons(String profession) {

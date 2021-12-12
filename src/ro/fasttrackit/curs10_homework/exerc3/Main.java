@@ -19,7 +19,7 @@ public class Main {
         company.add(person5);
 
         System.out.println(company);
-        System.out.println(company.getManager());
+        company.getManager();
         System.out.println(company.getPersons("Plummer"));
         System.out.println(company.getPersonsOlder(35));
         System.out.println(company.getPerson("Ge"));
