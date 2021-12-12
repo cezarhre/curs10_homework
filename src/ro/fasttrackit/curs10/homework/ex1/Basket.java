@@ -19,10 +19,11 @@ public class Basket {
     }
 
     public boolean remove(String outFruit) {
-        for (String fruit : fruits) {
-            if (fruit.equals(outFruit)) {
-                fruits.remove(fruit);
-                return true;
+        Iterator<String> iterator = fruits.iterator();
+            while (iterator.hasNext()) {
+                if (iterator.next().equals(outFruit)) {
+                    iterator.remove();
+                    return true;
                 }
             }
         return false;
@@ -39,9 +40,8 @@ public class Basket {
     }
 
     public Collection<String> distinct() {
-        Collection<String> basket = new HashSet<>();
-        basket.addAll(fruits);
-        return basket;
+        Collection<String> basket = new HashSet<>(fruits);
+        return new HashSet<>(fruits);
     }
 
     public int count(){
